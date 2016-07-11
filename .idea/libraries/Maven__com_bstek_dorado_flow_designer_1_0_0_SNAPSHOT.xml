@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.bstek.dorado:flow-designer:1.0.0-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/bstek/dorado/flow-designer/1.0.0-SNAPSHOT/flow-designer-1.0.0-20150917.023314-4.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/bstek/dorado/flow-designer/1.0.0-SNAPSHOT/flow-designer-1.0.0-20150917.023314-4-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/bstek/dorado/flow-designer/1.0.0-SNAPSHOT/flow-designer-1.0.0-20150917.023314-4-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
