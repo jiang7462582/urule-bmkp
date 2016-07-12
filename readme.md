@@ -17,20 +17,27 @@
 使用规则引擎则可以将这一部分独立出来.配置好相关的参数.后台只需要提供基本的POJO对象,和一般的逻辑方法(比如说判断是否是生日这种[动作库方法](http://wiki.bsdn.org/pages/viewpage.action?pageId=69828714)).然后在前端页面定义相应积分获取计算规则即可.
 
 #Urule讲解使用
+
 以小轿车的定价规则为例进行讲解说明
+
 ![](http://7xor08.com1.z0.glb.clouddn.com/bmkp_2016.7.11.png)
+
 ###1.[创建dorado7项目工程](http://wiki.bsdn.org/pages/viewpage.action?pageId=8356049)
+
 官方推荐适应他们集成的Eclipse-dorado IDE(仅适用于windows),且JDK版本1.6.
 导入IDEA可能会报错,所以我是创建一个maven工程,把他们那些配置文件直接拉过来的.
 
 
 ###2.配置开发
+
 Github:[urule-bmkp](https://github.com/jiang7462582/urule-bmkp)
 
 ####项目结构
+
 ![](http://7xor08.com1.z0.glb.clouddn.com/urlue-bmkp-struct.png)
 
 最重要的是需要提前在代码中配置规则和数据对应关系
+
 ```java
 	 public Double userRuleTest() throws Exception {
         //从Spring中获取KnowledgeService接口实例
@@ -58,6 +65,7 @@ Github:[urule-bmkp](https://github.com/jiang7462582/urule-bmkp)
 上面代码中的`bmkp/usercost`对应的就是待会在前端页面编辑的页面规则.
 
 Test.jsp文件
+
 ```html
 <%@page import="com.bmkp.urule.demo.test.TestURule"%>
 <%@ page language="java" contentType="text/html; charset=utf-8"
@@ -80,16 +88,17 @@ Test.jsp文件
 ```http
 http://localhost:8080/{App-Name}/com.bstek.urule.repo.view.Repository.d
 ```
+
 1. 导入相关的用户类对象[变量库](http://wiki.bsdn.org/pages/viewpage.action?pageId=69828686)
 ![](http://7xor08.com1.z0.glb.clouddn.com/urule-bmkp-bianliang.png)
 2. 导入[常量库](http://wiki.bsdn.org/pages/viewpage.action?pageId=69828690)
 ![](http://7xor08.com1.z0.glb.clouddn.com/urule-bmkp-changliang.png)
-3.导入[动作操作](http://wiki.bsdn.org/pages/viewpage.action?pageId=69828714)
+3. 导入[动作操作](http://wiki.bsdn.org/pages/viewpage.action?pageId=69828714)
 ![](http://7xor08.com1.z0.glb.clouddn.com/urule-bmkp-action.png)
 *注意*:此处的Bean ID 需要和spring配置文件一致
-4.编写执行脚本(暂时我只会脚本式)
+4. 编写执行脚本(暂时我只会脚本式)
 ![](http://7xor08.com1.z0.glb.clouddn.com/urule-bmkp-jiaoben.png)
-5.测试并发布运行脚本
+5. 测试并发布运行脚本
  双击资源包新建待发布的脚本
 ![](http://7xor08.com1.z0.glb.clouddn.com/urule-bmkp-fabu.png) 
 此处的编码id必须和你的Java代码资源包必须一致
