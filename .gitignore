@@ -128,4 +128,13 @@ Icon
 ## hack for graddle wrapper
 !wrapper/*.jar
 !**/wrapper/*.jar
-
+src/main/resources/
+src/main/webapp/repo/repository/nodetypes/
+src/main/webapp/repo/repository/privileges/
+src/main/webapp/repo/workspaces/default/items/16/
+src/main/webapp/repo/workspaces/default/items/27/
+src/main/webapp/repo/workspaces/default/items/7a/
+src/main/webapp/repo/workspaces/default/items/81/
+src/main/webapp/repo/workspaces/default/items/8a/
+src/main/webapp/repo/workspaces/default/items/d9/
+src/test/
