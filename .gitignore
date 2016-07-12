@@ -1,4 +1,4 @@
-tignore for maven 
+#gtignore for maven 
 target/
 *.releaseBackup
 
