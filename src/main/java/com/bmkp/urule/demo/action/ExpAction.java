@@ -30,7 +30,7 @@ public class ExpAction {
             Double gapMoneyForMile,Double gapMoneyForTime,Long minMinute){
         Long minute =new Double(Math.ceil(waitTime/60.0)).longValue();
         Long distance_=new Double(Math.ceil(distance)).longValue();
-        Long time = minute<minMinute? 0L:minute-minMinute;
+        Long time = waitTime<minMinute? 0L:waitTime-minMinute;
         if(distance_<minDistance){
             return minBaseCost+time*gapMoneyForTime;
         }else{
