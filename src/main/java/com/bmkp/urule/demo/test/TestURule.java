@@ -63,6 +63,23 @@ public class TestURule {
         return user.getCost();
     }
 
+    public Double userRuleTest(User user) throws Exception {
+        //从Spring中获取KnowledgeService接口实例
+        KnowledgeService knowledgeService = (KnowledgeService) Utils.getApplicationContext()
+                .getBean(KnowledgeService.BEAN_ID);
+        //通过KnowledgeService接口获取资源包rs－exp
+        KnowledgePackage knowledgePackage = knowledgeService.getKnowledge("bmkp/usercost");
+        //KnowledgePackage knowledgePackage = knowledgeService.getKnowledge("rs-exp");
+        //通过取到的KnowledgePackage对象创建KnowledgeSession对象
+        KnowledgeSession session = KnowledgeSessionFactory.newKnowledgeSession(knowledgePackage);
+        Map<String, Object> params = new HashMap<String, Object>();
+        //通过参数的方式设置获取经验的方式为购买经验
+        params.put("userRuleCost", "自定义用户消费金额");
+        session.insert(user);
+        session.fireRules(params);
+        return user.getCost();
+    }
+
 
 
 }

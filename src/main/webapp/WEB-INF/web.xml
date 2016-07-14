@@ -30,4 +30,15 @@
 		<servlet-name>doradoServlet</servlet-name>
 		<url-pattern>/dorado/*</url-pattern>
 	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>HelloWorld</servlet-name>
+		<servlet-class>com.bmkp.urule.demo.control.TestServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>HelloWorld</servlet-name>
+		<url-pattern>/HelloWorld</url-pattern>
+	</servlet-mapping>
+
 </web-app>
